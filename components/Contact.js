@@ -13,11 +13,26 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        console.error("Something went wrong while submitting the form.");
+      }
+    } catch (error) {
+      console.error("Error while submitting the form:", error);
+    }
   };
 
   return (
@@ -30,8 +45,7 @@ const Contact = () => {
             animate={{ opacity: 1 }}
             className="text-xl"
           >
-            Thank you for your message! I will get back to you as soon as
-            possible.
+            Thank you for your message!
           </motion.p>
         ) : (
           <form className="max-w-md mx-auto space-y-4" onSubmit={handleSubmit}>
