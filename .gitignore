@@ -1,0 +1,7 @@
+# Bestanden met gevoelige data
+.env
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
