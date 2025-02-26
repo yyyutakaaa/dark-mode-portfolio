@@ -5,11 +5,11 @@ const About = () => {
   return (
     <section id="about" className="py-20">
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center">
-        <div className="w-40 h-40 rounded-full overflow-hidden mb-8 md:mb-0 md:mr-8">
+        <div className="w-56 h-56 aspect-square rounded-full overflow-hidden mb-8 md:mb-0 md:mr-8 flex items-center justify-center">
           <img
             src="/images/pfp-original.jpeg"
             alt="About Me"
-            className="object-cover w-full h-full rounded-full"
+            className="object-cover min-w-full min-h-full"
           />
         </div>
         <div>
