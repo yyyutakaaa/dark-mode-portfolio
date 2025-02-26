@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 w-full bg-[#0D1117] bg-opacity-80 backdrop-blur-md z-50">
       <nav className="max-w-7xl mx-auto flex items-center justify-between p-4">
-        <div className="text-2xl font-bold text-[#00D4FF]">JouwNaam</div>
+        <div className="text-2xl font-bold text-[#00D4FF]">Mehdi Oulad Khlie</div>
         <ul className="hidden md:flex space-x-6">
           <li>
             <a href="#hero" className="hover:text-[#FF007A]">
@@ -17,12 +17,12 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#projects" className="hover:text-[#FF007A]">
-              Projecten
+              Projects
             </a>
           </li>
           <li>
             <a href="#about" className="hover:text-[#FF007A]">
-              Over
+              About
             </a>
           </li>
           <li>

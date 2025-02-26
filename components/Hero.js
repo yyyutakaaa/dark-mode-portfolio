@@ -24,7 +24,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        Jouw Naam
+        Mehdi Oulad Khlie
       </motion.h1>
       <motion.p
         className="text-xl md:text-2xl mb-8"
@@ -32,7 +32,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        Creative Developer & Designer
+        Network Engineering Student
       </motion.p>
       <motion.a
         href="#projects"
@@ -41,7 +41,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        Bekijk mijn werk
+        View my work
       </motion.a>
     </section>
   );

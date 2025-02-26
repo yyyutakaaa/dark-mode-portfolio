@@ -7,30 +7,34 @@ const About = () => {
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center">
         <div className="w-40 h-40 rounded-full overflow-hidden mb-8 md:mb-0 md:mr-8">
           <img
-            src="/images/avatar.jpg"
-            alt="Over mij"
+            src="/public/pfp-original.jpeg"
+            alt="About Me"
             className="object-cover w-full h-full"
           />
         </div>
         <div>
-          <h2 className="text-3xl font-bold mb-4">Over mij</h2>
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <motion.p
             className="mb-4"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Ik ben een creatieve webdesigner en front-end developer met passie
-            voor futuristisch design en interactieve animaties.
+            I am a 19-year-old Electronics-ICT student at Odisee Ghent,
+            specializing in Network Infrastructure. My passion lies in
+            designing, managing, and securing networks, and I aspire to become a
+            network engineer. Currently, I am deepening my knowledge in routing,
+            switching, network security, and cloud infrastructure to build a
+            strong foundation for my future career.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
           >
-            Persoonlijk ben ik kritisch op trends en ik geloof dat eenvoud en
-            consistentie in design de sleutel zijn tot een tijdloze
-            gebruikerservaring.
+            I am driven, eager to learn, and always looking for new challenges
+            to enhance my technical skills and stay ahead in the ever-evolving
+            world of networking.
           </motion.p>
         </div>
       </div>

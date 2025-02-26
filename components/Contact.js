@@ -30,14 +30,15 @@ const Contact = () => {
             animate={{ opacity: 1 }}
             className="text-xl"
           >
-            Bedankt voor je bericht!
+            Thank you for your message! I will get back to you as soon as
+            possible.
           </motion.p>
         ) : (
           <form className="max-w-md mx-auto space-y-4" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
-              placeholder="Naam"
+              placeholder="Name"
               value={formData.name}
               onChange={handleChange}
               className="w-full px-4 py-2 bg-[#0D1117] border border-gray-600 rounded focus:outline-none focus:border-[#00D4FF]"
@@ -54,7 +55,7 @@ const Contact = () => {
             />
             <textarea
               name="message"
-              placeholder="Bericht"
+              placeholder="Message"
               value={formData.message}
               onChange={handleChange}
               className="w-full px-4 py-2 bg-[#0D1117] border border-gray-600 rounded focus:outline-none focus:border-[#00D4FF]"
@@ -65,7 +66,7 @@ const Contact = () => {
               type="submit"
               className="w-full px-4 py-2 bg-[#FF007A] text-[#0D1117] rounded hover:bg-[#FF007A] transition-colors duration-300"
             >
-              Verzend
+              Send
             </button>
           </form>
         )}
