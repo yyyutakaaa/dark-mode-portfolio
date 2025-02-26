@@ -15,7 +15,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simuleer hier een API-call of e-mailverzending
     console.log(formData);
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
