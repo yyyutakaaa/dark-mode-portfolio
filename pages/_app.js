@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
           content="Mehdi Oulad Khlie - Network Student"
         />
         <meta property="og:description" content="Welcome to my portfolio" />
-        <meta property="og:image" content="/images/pfp-original.jpeg" />
+        <meta property="og:image" content="/images/pfp-thumbnail.png" />
         <meta property="og:url" content="https://mehdioul.dev" />
         <meta property="og:type" content="website" />
 
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
           content="Mehdi Oulad Khlie - Network Student"
         />
         <meta name="twitter:description" content="Welcome to my portfolio" />
-        <meta name="twitter:image" content="/images/pfp-original.jpeg" />
+        <meta name="twitter:image" content="/images/pfp-thumbnail.png" />
       </Head>
       <Component {...pageProps} />
       <CookieBanner />
