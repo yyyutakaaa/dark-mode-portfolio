@@ -22,7 +22,7 @@ const Projects = () => {
                   Network Infrastructure Project
                 </h3>
                 <img
-                  src="/images/cyberspace-2784907_1920.jpg"
+                  src="/images/network-project.webp"
                   alt="Project preview"
                   className="w-full h-48 object-cover rounded-lg mb-2"
                 />
