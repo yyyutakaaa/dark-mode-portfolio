@@ -36,7 +36,6 @@ const Hero = () => {
       >
         a Network Engineering Student
       </motion.p>
-      {/* Extra regeltje voor meer context */}
       <motion.p
         className="text-md md:text-lg mb-8 text-gray-400 max-w-xl"
         initial={{ opacity: 0 }}
@@ -45,15 +44,6 @@ const Hero = () => {
       >
         I specialize in designing, securing, and optimizing modern networks.
       </motion.p>
-      <motion.a
-        href="#projects"
-        className="px-6 py-3 border border-[#00D4FF] text-[#00D4FF] rounded-full hover:bg-[#00D4FF] hover:text-[#0D1117] transition-colors duration-300"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        View my work
-      </motion.a>
     </section>
   );
 };
