@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -7,12 +8,31 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-[#161B22]">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-white">
+          Projects
+        </h2>
         {projects.length === 0 ? (
-          <div className="text-center">
-            <p className="text-xl">
-              No projects added yet, but more are coming soon!
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/pages/Network-Infrastructure-Project.js">
+              <motion.div
+                className="p-6 bg-white bg-opacity-5 backdrop-blur-md rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+              >
+                <h3 className="text-2xl font-bold mb-2 text-[#00D4FF]">
+                  Network Infrastructure Project
+                </h3>
+                {/* Placeholder image */}
+                <img
+                  src="/images/cyberspace-2784907_1920.jpg"
+                  alt="Project preview"
+                  className="w-full h-48 object-cover rounded-lg mb-2"
+                />
+                <p className="text-sm text-gray-300">
+                  Click here to view the detailed project description and learn
+                  more about the network configuration and deployment.
+                </p>
+              </motion.div>
+            </Link>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
