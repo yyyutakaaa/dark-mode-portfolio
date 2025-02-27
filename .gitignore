@@ -6,4 +6,4 @@
 .env.production
 .env.production.local
 node_modules/
-.next/
+.next/node_modules/
