@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,29 +9,50 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 w-full bg-[#0D1117] bg-opacity-80 backdrop-blur-md z-50">
       <nav className="max-w-7xl mx-auto flex items-center justify-between p-4">
-        <div className="text-2xl font-bold text-[#00D4FF]">Mehdi Oulad Khlie</div>
+        {/* Logo & initialen */}
+        <div className="flex items-center space-x-2">
+          <Logo />
+        </div>
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#hero" className="hover:text-[#FF007A]">
+            <a
+              href="#hero"
+              className="relative group transition-colors text-[#E0E0E0]"
+            >
               Home
+              {/* Subtiel lijntje bij hover */}
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#FF007A] transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
           <li>
-            <a href="#projects" className="hover:text-[#FF007A]">
+            <a
+              href="#projects"
+              className="relative group transition-colors text-[#E0E0E0]"
+            >
               Projects
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#FF007A] transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
           <li>
-            <a href="#about" className="hover:text-[#FF007A]">
+            <a
+              href="#about"
+              className="relative group transition-colors text-[#E0E0E0]"
+            >
               About
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#FF007A] transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-[#FF007A]">
+            <a
+              href="#contact"
+              className="relative group transition-colors text-[#E0E0E0]"
+            >
               Contact
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#FF007A] transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
         </ul>
+        {/* Hamburger menu */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
@@ -41,6 +63,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+      {/* Mobiele navigatie */}
       {menuOpen && (
         <motion.ul
           initial={{ opacity: 0, y: -20 }}
@@ -62,7 +85,7 @@ const Navbar = () => {
               className="hover:text-[#FF007A]"
               onClick={toggleMenu}
             >
-              Projecten
+              Projects
             </a>
           </li>
           <li>
@@ -71,7 +94,7 @@ const Navbar = () => {
               className="hover:text-[#FF007A]"
               onClick={toggleMenu}
             >
-              Over
+              About
             </a>
           </li>
           <li>
