@@ -13,7 +13,7 @@ const Projects = () => {
         </h2>
         {projects.length === 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/pages/Network-Infrastructure-Project.js">
+            <Link href="/Network-Infrastructure-Project.js">
               <motion.div
                 className="p-6 bg-white bg-opacity-5 backdrop-blur-md rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
