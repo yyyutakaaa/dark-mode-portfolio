@@ -21,7 +21,6 @@ const Projects = () => {
                 <h3 className="text-2xl font-bold mb-2 text-[#00D4FF]">
                   Network Infrastructure Project
                 </h3>
-                {/* Placeholder image */}
                 <img
                   src="/images/cyberspace-2784907_1920.jpg"
                   alt="Project preview"
