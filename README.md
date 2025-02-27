@@ -21,19 +21,19 @@ A minimalistic and futuristic portfolio website built with Next.js, Tailwind CSS
 
 1. **Clone the Repository**:  
    ```bash
-   git clone https://github.com/yourusername/dark-mode-portfolio.git
+   git clone https://github.com/yyyutakaaa/dark-mode-portfolio.git
    cd dark-mode-portfolio
 
-	2.	Install Dependencies:
+2. **Install Dependencies:**
 Ensure you have Node.js installed, then run:
 
 npm install
 
 
-	3.	Run the Development Server:
+3.	**Run the Development Server:**
 Start the development server with:
 
-npm run dev
+    npm run dev
 
 Open http://localhost:3000 in your browser to view the site.
 
@@ -42,9 +42,9 @@ Deployment
 The project is optimized for deployment on Vercel. Simply connect your GitHub repository to Vercel, and the platform will automatically build and deploy your site.
 
 Customization
-	•	Content: Update personal details, projects, and contact information directly within the components.
-	•	Styling: Modify Tailwind CSS classes to adjust colors, typography, and layout to suit your personal style.
-	•	Animations: Customize the interactive animations by tweaking the settings in Framer Motion and GSAP.
+•	**Content**: Update personal details, projects, and contact information directly within the components.
+•	**Styling**: Modify Tailwind CSS classes to adjust colors, typography, and layout to suit your personal style.
+•	**Animations**: Customize the interactive animations by tweaking the settings in Framer Motion and GSAP.
 
 License
 
