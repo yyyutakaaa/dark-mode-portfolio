@@ -175,7 +175,7 @@ export default function NetworkInfrastructureProject() {
         {/* Link to FuelTracker */}
         <section className="mb-8">
           <Link
-            href="/FuelTracker/index.html"
+            href="https://fueltracker.mehdioul.dev"
             className="inline-block text-[#00D4FF] hover:underline"
           >
             &larr; Go to Fuel Tracker
