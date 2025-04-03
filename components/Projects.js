@@ -22,8 +22,8 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "🚀 ShutItDown – Remote PC Shutdown Application",
-      image: "/images/shutitdown.webp",
+      title: "ShutItDown – Remote PC Shutdown Application",
+      image: "/images/shutdown-pc.png",
       description:
         "Klik hier voor de projectdetails en uitleg over hoe je je PC op afstand kunt uitschakelen.",
       href: "/ShutItDown",
