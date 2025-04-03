@@ -20,6 +20,14 @@ const Projects = () => {
         "Klik hier om de gedetailleerde projectbeschrijving te bekijken en meer te weten te komen over de webapplicatie voor brandstofbeheer.",
       href: "/Fuel-WebApp",
     },
+    {
+      id: 3,
+      title: "🚀 ShutItDown – Remote PC Shutdown Application",
+      image: "/images/shutitdown.webp",
+      description:
+        "Klik hier voor de projectdetails en uitleg over hoe je je PC op afstand kunt uitschakelen.",
+      href: "/ShutItDown",
+    },
   ];
 
   return (
