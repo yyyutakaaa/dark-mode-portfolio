@@ -73,7 +73,17 @@ export default function ShutItDown() {
             security and additional functionalities like remote restart or sleep
             mode.
           </p>
-          <p>Check out the code and more details on my GitHub →</p>
+          {/* GitHub Link */}
+          <section className="mb-8">
+            <Link
+              href="https://github.com/yyyutakaaa/ShutItDown"
+              className="inline-block text-[#00D4FF] hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🔗 View the project on GitHub
+            </Link>
+          </section>
         </section>
       </main>
       <Footer />
