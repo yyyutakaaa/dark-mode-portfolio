@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import CodeWindow from "./CodeWIndow";
+import CodeWindow from "./CodeWindow";
 
 const skills = [
   "Python",
