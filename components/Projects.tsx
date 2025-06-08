@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "InstaDM-Saver",
     description:
-      "Een krachtige tool met zowel GUI als CLI versies om Instagram Direct Messages te fetchen en op te slaan. Ondersteunt 2FA, sessie hergebruik, en biedt een moderne interface voor het selecteren en exporteren van gesprekken.",
+      "A powerful tool with both GUI and CLI versions to fetch and save Instagram Direct Messages. Built as a hobby project to explore Python GUI development and API integration. Features 2FA support, session reuse, and modern interface design.",
     icon: "📱",
     technologies: ["Python", "CustomTkinter", "Instagrapi"],
     githubUrl: "https://github.com/yyyutakaaa/InstaDM-Saver",
@@ -19,7 +19,7 @@ const projects = [
     id: 2,
     title: "ShutItDown",
     description:
-      "Windows desktop applicatie waarmee je je PC op afstand kunt afsluiten via elk web-enabled apparaat. Features: system tray integratie, PIN beveiliging, moderne UI met animaties, en self-contained executable.",
+      "Windows desktop application enabling remote PC shutdown via any web-enabled device. Created to learn C# and explore web server integration in desktop apps. Features system tray integration, PIN security, and self-contained deployment.",
     icon: "🖥️",
     technologies: ["C#", ".NET 6", "ASP.NET Core", "Windows Forms"],
     githubUrl: "https://github.com/yyyutakaaa/ShutItDown",
@@ -29,7 +29,7 @@ const projects = [
     id: 3,
     title: "FuelTracker",
     description:
-      "Progressive Web App voor het bijhouden van brandstofverbruik en -kosten. Werkt offline, installeerbaar op alle devices, met een clean en responsive interface voor het tracken van tankbeurten.",
+      "Progressive Web App for tracking fuel consumption and costs. Built to learn PWA development and create a practical tool for personal use. Works offline, installable on all devices with responsive design.",
     icon: "⛽",
     technologies: ["JavaScript", "HTML5", "CSS3", "PWA"],
     githubUrl: "https://github.com/yyyutakaaa/FuelTracker",
@@ -52,8 +52,19 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold text-center mb-12 text-primary"
         >
-          Mijn Projecten
+          My Hobby Projects
         </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-center text-text-secondary mb-12 max-w-2xl mx-auto"
+        >
+          While studying Network Infrastructure, I love exploring software
+          development in my free time. Here are some personal projects I've
+          built to learn new technologies and solve practical problems.
+        </motion.p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (

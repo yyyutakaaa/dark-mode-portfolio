@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Hero() {
   const [text, setText] = useState("");
   const fullText =
-    "Full-Stack Developer met een passie voor het bouwen van innovatieve oplossingen";
+    "Electronics-ICT Student at Odisee Ghent | Network Infrastructure Enthusiast";
 
   useEffect(() => {
     let i = 0;
@@ -35,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-gradient"
         >
-          Hi, ik ben Mehdi 👋
+          Hi, I'm Mehdi 👋
         </motion.h1>
 
         <motion.p
@@ -60,13 +60,13 @@ export default function Hero() {
             href="#projects"
             className="px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
-            Bekijk mijn werk
+            View my projects
           </Link>
           <Link
             href="#contact"
             className="px-8 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300"
           >
-            Neem contact op
+            Get in touch
           </Link>
         </motion.div>
 

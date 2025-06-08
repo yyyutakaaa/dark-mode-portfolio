@@ -37,7 +37,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold mb-6 text-primary"
         >
-          Laten we connecten!
+          Let's Connect!
         </motion.h2>
 
         <motion.p
@@ -46,8 +46,9 @@ export default function Contact() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-text-secondary text-lg mb-10"
         >
-          Heb je een interessant project of wil je gewoon even chatten over
-          tech? Ik sta altijd open voor nieuwe uitdagingen en samenwerkingen.
+          Have an interesting project or just want to chat about tech,
+          networking, or development? I'm always open to new opportunities and
+          collaborations.
         </motion.p>
 
         <motion.div
@@ -82,24 +83,24 @@ export default function Contact() {
           className="mt-16 p-8 bg-bg-card rounded-2xl border border-primary/20"
         >
           <h3 className="text-2xl font-semibold mb-4 text-gradient">
-            Direct bericht sturen
+            Send me a message
           </h3>
           <p className="text-text-secondary mb-6">
-            Vul het formulier in en ik neem zo snel mogelijk contact met je op!
+            Fill out the form and I'll get back to you as soon as possible!
           </p>
           <form className="space-y-4 max-w-md mx-auto">
             <input
               type="text"
-              placeholder="Je naam"
+              placeholder="Your name"
               className="w-full px-4 py-3 bg-bg-dark rounded-lg border border-primary/20 focus:border-primary outline-none transition-colors"
             />
             <input
               type="email"
-              placeholder="Je email"
+              placeholder="Your email"
               className="w-full px-4 py-3 bg-bg-dark rounded-lg border border-primary/20 focus:border-primary outline-none transition-colors"
             />
             <textarea
-              placeholder="Je bericht"
+              placeholder="Your message"
               rows={4}
               className="w-full px-4 py-3 bg-bg-dark rounded-lg border border-primary/20 focus:border-primary outline-none transition-colors resize-none"
             />
@@ -107,7 +108,7 @@ export default function Contact() {
               type="submit"
               className="w-full py-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
             >
-              Verstuur bericht
+              Send message
             </button>
           </form>
         </motion.div>

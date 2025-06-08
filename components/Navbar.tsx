@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "Over Mij" },
-  { href: "#projects", label: "Projecten" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-2xl font-bold text-gradient">
-            Mehdi Oulad Khlie
+            Mehdi Oulad
           </Link>
 
           <div className="hidden md:flex space-x-8">
