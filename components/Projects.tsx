@@ -23,7 +23,6 @@ const projects = [
     icon: "🖥️",
     technologies: ["C#", ".NET 6", "ASP.NET Core", "Windows Forms"],
     githubUrl: "https://github.com/yyyutakaaa/ShutItDown",
-    liveUrl: "https://mehdioul.dev/",
   },
   {
     id: 3,
