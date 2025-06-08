@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehdi Oulad - Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-animation"></div>
+
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="logo">Mehdi Oulad</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Over Mij</a></li>
+          <li><a href="#projects">Projecten</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hi, ik ben Mehdi 👋</h1>
+        <p class="subtitle">
+          Full-Stack Developer met een passie voor het bouwen van innovatieve
+          oplossingen
+        </p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">Bekijk mijn werk</a>
+          <a href="#contact" class="btn btn-secondary">Neem contact op</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Over Mij</h2>
+          <p>
+            Ik ben een gepassioneerde developer die houdt van het creëren van
+            praktische en gebruiksvriendelijke applicaties. Van Python
+            automation tools tot Windows desktop apps en web applicaties - ik
+            geniet van diverse technische uitdagingen.
+          </p>
+          <p>
+            Mijn recente projecten variëren van het automatiseren van Instagram
+            DM's tot het bouwen van remote control systemen en PWA's. Ik geloof
+            in clean code, goede UX en het oplossen van echte problemen.
+          </p>
+          <div class="skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C# / .NET</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">ASP.NET Core</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">API Development</span>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="code-window">
+            <div class="window-header">
+              <span class="window-dot dot-red"></span>
+              <span class="window-dot dot-yellow"></span>
+              <span class="window-dot dot-green"></span>
+            </div>
+            <div class="code-content">
+              <div class="code-line">
+                <span class="code-keyword">class</span>
+                <span class="code-function">Developer</span>:
+              </div>
+              <div class="code-line">
+                <span class="code-keyword">def</span>
+                <span class="code-function">__init__</span>(self):
+              </div>
+              <div class="code-line">
+                self.name = <span class="code-string">"Mehdi Oulad"</span>
+              </div>
+              <div class="code-line">
+                self.role =
+                <span class="code-string">"Full-Stack Developer"</span>
+              </div>
+              <div class="code-line">
+                self.languages = [<span class="code-string">"Python"</span>,
+                <span class="code-string">"C#"</span>,
+                <span class="code-string">"JavaScript"</span>]
+              </div>
+              <div class="code-line">
+                self.current_focus =
+                <span class="code-string">"Building cool stuff"</span>
+              </div>
+              <div class="code-line">
+                self.fun_fact =
+                <span class="code-string">"I automate everything I can"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Mijn Projecten</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">📱</div>
+            <h3 class="project-title">InstaDM-Saver</h3>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">CustomTkinter</span>
+              <span class="tech-badge">Instagrapi</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Een krachtige tool met zowel GUI als CLI versies om Instagram
+              Direct Messages te fetchen en op te slaan. Ondersteunt 2FA, sessie
+              hergebruik, en biedt een moderne interface voor het selecteren en
+              exporteren van gesprekken.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/yyyutakaaa/InstaDM-Saver"
+                class="project-link"
+                target="_blank"
+              >
+                GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🖥️</div>
+            <h3 class="project-title">ShutItDown</h3>
+            <div class="project-tech">
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">.NET 6</span>
+              <span class="tech-badge">ASP.NET Core</span>
+              <span class="tech-badge">Windows Forms</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Windows desktop applicatie waarmee je je PC op afstand kunt
+              afsluiten via elk web-enabled apparaat. Features: system tray
+              integratie, PIN beveiliging, moderne UI met animaties, en
+              self-contained executable.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/yyyutakaaa/ShutItDown"
+                class="project-link"
+                target="_blank"
+              >
+                GitHub →
+              </a>
+              <a
+                href="https://mehdioul.dev/"
+                class="project-link"
+                target="_blank"
+              >
+                Website →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">⛽</div>
+            <h3 class="project-title">FuelTracker</h3>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">PWA</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Progressive Web App voor het bijhouden van brandstofverbruik en
+              -kosten. Werkt offline, installeerbaar op alle devices, met een
+              clean en responsive interface voor het tracken van tankbeurten.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/yyyutakaaa/FuelTracker"
+                class="project-link"
+                target="_blank"
+              >
+                GitHub →
+              </a>
+              <a
+                href="https://fueltracker.mehdioul.dev"
+                class="project-link"
+                target="_blank"
+              >
+                Live Demo →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Laten we connecten!</h2>
+      <p style="color: var(--text-secondary); font-size: 1.1rem">
+        Heb je een interessant project of wil je gewoon even chatten over tech?
+        Ik sta altijd open voor nieuwe uitdagingen en samenwerkingen.
+      </p>
+      <div class="contact-links">
+        <a
+          href="https://github.com/yyyutakaaa"
+          class="contact-link"
+          target="_blank"
+        >
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+          GitHub
+        </a>
+        <a href="mailto:contact@mehdioul.dev" class="contact-link">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            />
+          </svg>
+          Email
+        </a>
+        <a href="https://mehdioul.dev" class="contact-link" target="_blank">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+            />
+          </svg>
+          Website
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Mehdi Oulad. Gebouwd met ❤️ en veel ☕</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
