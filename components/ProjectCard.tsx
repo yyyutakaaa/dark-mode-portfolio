@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <motion.div
       whileHover={{ y: -5, scale: 1.02 }}
       transition={{ duration: 0.2 }}
-      className="bg-bg-card border border-accent/20 rounded-xl p-6 hover:border-accent/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+      className="bg-bg-card border border-accent/20 rounded-xl p-6 hover:border-accent/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 h-full flex flex-col"
     >
       <div className="flex items-center gap-3 mb-4">
         <span className="text-3xl">{project.icon}</span>
@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      <p className="text-text-secondary mb-4 leading-relaxed">
+      <p className="text-text-secondary mb-4 leading-relaxed flex-grow">
         {project.description}
       </p>
 
