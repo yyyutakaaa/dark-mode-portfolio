@@ -13,6 +13,8 @@ const projects = [
     icon: "📱",
     technologies: ["Python", "CustomTkinter", "Instagrapi"],
     githubUrl: "https://github.com/yyyutakaaa/InstaDM-Saver",
+    windowsDownloadUrl:
+      "https://github.com/yyyutakaaa/InstaDM-Saver/releases/latest",
     featured: true,
   },
   {
@@ -23,12 +25,13 @@ const projects = [
     icon: "🖥️",
     technologies: ["C#", ".NET 6", "ASP.NET Core", "Windows Forms"],
     githubUrl: "https://github.com/yyyutakaaa/ShutItDown",
+    liveUrl: "https://mehdioul.dev/",
   },
   {
     id: 3,
     title: "FuelTracker",
     description:
-      "Progressive Web App for tracking fuel consumption and costs. Built to learn PWA development and create a practical tool for personal use. Works offline, installable on all devices with responsive design.",
+      "Progressive Web App for tracking fuel consumption and costs. Built to learn PWA development and create a practical tool for personal use. Uses API to fetch fuel prices from the Belgian database and provides a user-friendly interface for logging and analyzing fuel usage and expenses.",
     icon: "⛽",
     technologies: ["JavaScript", "HTML5", "CSS3", "PWA"],
     githubUrl: "https://github.com/yyyutakaaa/FuelTracker",

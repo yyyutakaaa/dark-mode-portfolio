@@ -11,7 +11,7 @@ const codeLines = [
   { text: " __init__", type: "function" },
   { text: "(self):", type: "plain" },
   { text: "\n        self.name = ", type: "plain" },
-  { text: '"Mehdi Oulad"', type: "string" },
+  { text: '"Mehdi Oulad Khlie"', type: "string" },
   { text: "\n        self.school = ", type: "plain" },
   { text: '"Odisee Ghent"', type: "string" },
   { text: "\n        self.major = ", type: "plain" },
@@ -19,13 +19,13 @@ const codeLines = [
   { text: "\n        self.specialization = ", type: "plain" },
   { text: '"Network Infrastructure"', type: "string" },
   { text: "\n        self.hobbies = [", type: "plain" },
-  { text: '"Front-end Dev"', type: "string" },
+  { text: '"Gamer"', type: "string" },
   { text: ", ", type: "plain" },
   { text: '"Automation"', type: "string" },
   { text: ", ", type: "plain" },
   { text: '"Building Apps"', type: "string" },
   { text: "]\n        self.motto = ", type: "plain" },
-  { text: '"Learning by doing"', type: "string" },
+  { text: '"Stay real. Stay sharp. Keep learning"', type: "string" },
 ];
 
 export default function CodeWindow() {
@@ -56,13 +56,13 @@ export default function CodeWindow() {
   };
 
   return (
-    <div className="bg-bg-card rounded-xl p-6 shadow-xl border border-primary/20">
+    <div className="bg-bg-card rounded-xl p-6 shadow-xl border border-primary/20 overflow-x-auto">
       <div className="flex gap-2 mb-4">
         <div className="w-3 h-3 rounded-full bg-red-500" />
         <div className="w-3 h-3 rounded-full bg-yellow-500" />
         <div className="w-3 h-3 rounded-full bg-green-500" />
       </div>
-      <pre className="font-mono text-sm">
+      <pre className="font-mono text-sm whitespace-pre-wrap break-words">
         <code>
           {displayedCode.map((line, index) => (
             <span key={index} className={getColorClass(line.type)}>

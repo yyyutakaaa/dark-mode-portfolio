@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Download } from "lucide-react";
 
 interface Project {
   id: number;
@@ -12,6 +12,7 @@ interface Project {
   githubUrl: string;
   liveUrl?: string;
   featured?: boolean;
+  windowsDownloadUrl?: string;
 }
 
 interface ProjectCardProps {
@@ -57,12 +58,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300"
+            className="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300"
           >
             <Github size={16} />
             <span>GitHub</span>
@@ -72,10 +73,29 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark transition-all duration-300"
+              className="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark transition-all duration-300"
             >
               <ExternalLink size={16} />
               <span>Live Demo</span>
+            </a>
+          )}
+          {project.windowsDownloadUrl && (
+            <a
+              href={project.windowsDownloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-2 rounded-lg bg-accent text-white hover:bg-blue-600 transition-all duration-300"
+              title="Download for Windows"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 88 88"
+                fill="currentColor"
+              >
+                <path d="m0,12.402,35.687-4.8602.0156,34.423-35.67.20313zm35.67,33.529.0277,34.453-35.67-4.9041-.002-29.78zm4.3261-39.025,47.318-6.906v41.527l-47.318.37565zm47.329,39.349-.0111,41.34-47.318-6.6784-.0663-34.739z" />
+              </svg>
+              <span>Download</span>
             </a>
           )}
         </div>

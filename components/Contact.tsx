@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Github, Mail, Globe } from "lucide-react";
+import { Github, Mail, Instagram } from "lucide-react";
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -76,18 +76,18 @@ export default function Contact() {
             <Github size={20} /> GitHub
           </a>
           <a
-            href="mailto:contact@mehdioul.dev"
+            href="mailto:support@mehdioul.dev"
             className="flex items-center gap-2 px-6 py-3 rounded-full border border-primary/30 text-text-secondary hover:text-primary hover:border-primary transition-all duration-300"
           >
             <Mail size={20} /> Email
           </a>
           <a
-            href="https://mehdioul.dev"
+            href="https://www.instagram.com/o.mehdi.k/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-full border border-primary/30 text-text-secondary hover:text-primary hover:border-primary transition-all duration-300"
           >
-            <Globe size={20} /> Website
+            <Instagram size={20} /> Instagram
           </a>
         </motion.div>
 
@@ -118,12 +118,12 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="
-    w-full px-4 py-3
-    bg-[var(--bg-dark)] text-white placeholder:text-text-secondary
-    rounded-lg border border-primary/20
-    focus:border-primary outline-none transition-colors
-  "
+              className={
+                "w-full px-4 py-3" +
+                " bg-[var(--bg-dark)] text-white placeholder:text-text-secondary" +
+                " rounded-lg border border-primary/20" +
+                " focus:border-primary outline-none transition-colors"
+              }
             />
 
             <input
