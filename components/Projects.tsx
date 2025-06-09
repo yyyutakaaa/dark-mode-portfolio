@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ProjectCard from "./ProjectCard";
@@ -14,7 +13,9 @@ const projects = [
     technologies: ["Python", "CustomTkinter", "Instagrapi"],
     githubUrl: "https://github.com/yyyutakaaa/InstaDM-Saver",
     windowsDownloadUrl:
-      "https://github.com/yyyutakaaa/InstaDM-Saver/releases/latest",
+      "https://github.com/yyyutakaaa/InstaDM-Saver/releases/download/v1.0.0/InstagramDMFetcher.exe",
+    macDownloadUrl:
+      "https://github.com/yyyutakaaa/homebrew-instagram-dm-fetcher/tree/main",
     featured: true,
   },
   {
@@ -25,7 +26,8 @@ const projects = [
     icon: "🖥️",
     technologies: ["C#", ".NET 6", "ASP.NET Core", "Windows Forms"],
     githubUrl: "https://github.com/yyyutakaaa/ShutItDown",
-    liveUrl: "https://mehdioul.dev/",
+    windowsDownloadUrl:
+      "https://github.com/yyyutakaaa/ShutItDown/releases/download/v1.5/ShutdownServerApp.7z",
   },
   {
     id: 3,
@@ -56,7 +58,6 @@ export default function Projects() {
         >
           My Hobby Projects
         </motion.h2>
-
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -67,7 +68,6 @@ export default function Projects() {
           development in my free time. Here are some personal projects I've
           built to learn new technologies and solve practical problems.
         </motion.p>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
