@@ -1,7 +1,24 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Download, Apple } from "lucide-react";
 
-export default function ProjectCard({ project }) {
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+  technologies: string[];
+  githubUrl: string;
+  windowsDownloadUrl?: string;
+  macDownloadUrl?: string;
+  liveUrl?: string;
+  featured?: boolean;
+}
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <motion.div
       whileHover={{ y: -5, scale: 1.02 }}
