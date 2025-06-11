@@ -39,6 +39,24 @@ const projects = [
     githubUrl: "https://github.com/yyyutakaaa/FuelTracker",
     liveUrl: "https://fueltracker.mehdioul.dev",
   },
+  {
+    id: 4,
+    title: "Finwise",
+    description:
+      "AI-powered personal finance web application for managing expenses, tracking cash flow, and receiving intelligent financial advice. Features include automatic monthly expense cleanup, real-time synchronization, and AI-powered financial insights using OpenAI GPT.",
+    icon: "💰",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "OpenAI GPT",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
+    githubUrl: "https://github.com/yyyutakaaa/Finwise",
+    liveUrl: "https://finwise.mehdioul.dev/dashboard",
+    featured: true,
+  },
 ];
 
 export default function Projects() {
