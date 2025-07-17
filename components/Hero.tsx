@@ -27,6 +27,8 @@ export default function Hero() {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center px-4"
+      role="banner"
+      aria-label="Hero section"
     >
       <div className="text-center max-w-4xl">
         <motion.h1
@@ -35,7 +37,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-gradient"
         >
-          Hi, I'm Mehdi 👋
+          <span className="sr-only">Hello, I'm </span>Hi, I'm Mehdi 👋
         </motion.h1>
 
         <motion.p
@@ -43,10 +45,16 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-xl md:text-2xl text-text-secondary mb-8 h-20"
+          role="status"
+          aria-live="polite"
+          aria-label="Professional title"
         >
           {text}
           {text.length < fullText.length && (
-            <span className="inline-block w-1 h-6 ml-1 bg-primary animate-pulse" />
+            <span 
+              className="inline-block w-1 h-6 ml-1 bg-primary animate-pulse" 
+              aria-hidden="true"
+            />
           )}
         </motion.p>
 
@@ -55,16 +63,20 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
+          role="navigation"
+          aria-label="Main actions"
         >
           <Link
             href="#projects"
-            className="px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bg-dark"
+            aria-label="View my projects section"
           >
             View my projects
           </Link>
           <Link
             href="#contact"
-            className="px-8 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300"
+            className="px-8 py-3 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bg-dark"
+            aria-label="Go to contact section"
           >
             Get in touch
           </Link>
@@ -81,6 +93,9 @@ export default function Hero() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
+            role="img"
+            aria-label="Scroll down indicator"
           >
             <path
               strokeLinecap="round"

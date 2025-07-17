@@ -69,7 +69,7 @@ export default function About() {
   });
 
   return (
-    <section id="about" className="py-20 px-4" ref={ref}>
+    <section id="about" className="py-20 px-4" ref={ref} role="main" aria-labelledby="about-heading">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ export default function About() {
           className="grid md:grid-cols-2 gap-12 items-start"
         >
           <div>
-            <h2 className="text-4xl font-bold mb-6 text-primary">About Me</h2>
+            <h2 id="about-heading" className="text-4xl font-bold mb-6 text-primary">About Me</h2>
             <p className="text-text-secondary mb-4 text-lg">
               I'm an Electronics-ICT student at Odisee Ghent, specializing in
               Network Infrastructure. My academic journey combines deep
@@ -92,7 +92,7 @@ export default function About() {
               problems, from automation tools to web applications.
             </p>
 
-            <h3 className="text-xl font-semibold mb-4 text-text-primary">
+            <h3 className="text-xl font-semibold mb-4 text-text-primary" id="studies-heading">
               Current Studies
             </h3>
             <div className="space-y-4 mb-6">
@@ -118,7 +118,7 @@ export default function About() {
               </div>
             </div>
 
-            <h3 className="text-xl font-semibold mb-4 text-text-primary">
+            <h3 className="text-xl font-semibold mb-4 text-text-primary" id="skills-heading">
               Technical Skills
             </h3>
             <div className="space-y-3">
@@ -126,14 +126,16 @@ export default function About() {
                 <p className="text-sm text-text-secondary mb-2">
                   Programming & Development
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2" role="list" aria-label="Programming and development skills">
                   {technicalSkills.map((skill, index) => (
                     <motion.span
                       key={skill}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={inView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ delay: index * 0.05, duration: 0.3 }}
-                      className="px-3 py-1 bg-bg-card border border-primary/30 rounded-full text-sm hover:bg-primary hover:border-primary hover:scale-105 transition-all duration-300"
+                      className="px-3 py-1 bg-bg-card border border-primary/30 rounded-full text-sm hover:bg-primary hover:border-primary hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                      role="listitem"
+                      tabIndex={0}
                     >
                       {skill}
                     </motion.span>
@@ -144,14 +146,16 @@ export default function About() {
                 <p className="text-sm text-text-secondary mb-2">
                   Networking & Infrastructure
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2" role="list" aria-label="Networking and infrastructure skills">
                   {networkSkills.map((skill, index) => (
                     <motion.span
                       key={skill}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={inView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ delay: index * 0.05 + 0.5, duration: 0.3 }}
-                      className="px-3 py-1 bg-bg-card border border-secondary/30 rounded-full text-sm hover:bg-secondary hover:border-secondary hover:scale-105 transition-all duration-300"
+                      className="px-3 py-1 bg-bg-card border border-secondary/30 rounded-full text-sm hover:bg-secondary hover:border-secondary hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-secondary"
+                      role="listitem"
+                      tabIndex={0}
                     >
                       {skill}
                     </motion.span>

@@ -56,9 +56,10 @@ export default function Projects() {
   })
 
   return (
-    <section id="projects" className="py-20 px-4 bg-bg-card/30" ref={ref}>
+    <section id="projects" className="py-20 px-4 bg-bg-card/30" ref={ref} role="main" aria-labelledby="projects-heading">
       <div className="max-w-7xl mx-auto">
         <motion.h2
+          id="projects-heading"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -77,13 +78,14 @@ export default function Projects() {
           Here are some personal projects I've built to learn new technologies and solve practical problems.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6" role="list" aria-label="List of hobby projects">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.2, duration: 0.8 }}
+              role="listitem"
             >
               <ProjectCard project={project} />
             </motion.div>

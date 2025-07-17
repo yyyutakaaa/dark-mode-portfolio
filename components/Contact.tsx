@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Github, Mail, Instagram } from "lucide-react";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -41,9 +42,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-4" ref={ref}>
+    <section id="contact" className="py-20 px-4" ref={ref} role="main" aria-labelledby="contact-heading">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
+          id="contact-heading"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -110,7 +112,7 @@ export default function Contact() {
             </p>
           )}
 
-          <form className="space-y-4 max-w-md mx-auto" onSubmit={handleSubmit}>
+          <form className="space-y-4 max-w-md mx-auto" onSubmit={handleSubmit} noValidate>
             <input
               type="text"
               name="name"
@@ -118,11 +120,12 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
+              aria-label="Your full name"
               className={
                 "w-full px-4 py-3" +
                 " bg-[var(--bg-dark)] text-white placeholder:text-text-secondary" +
                 " rounded-lg border border-primary/20" +
-                " focus:border-primary outline-none transition-colors"
+                " focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bg-card outline-none transition-colors"
               }
             />
 
@@ -133,7 +136,8 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-[var(--bg-dark)] text-white placeholder:text-text-secondary rounded-lg border border-primary/20 focus:border-primary outline-none transition-colors"
+              aria-label="Your email address"
+              className="w-full px-4 py-3 bg-[var(--bg-dark)] text-white placeholder:text-text-secondary rounded-lg border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bg-card outline-none transition-colors"
             />
             <textarea
               name="message"
@@ -142,15 +146,24 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-[var(--bg-dark)] text-white placeholder:text-text-secondary rounded-lg border border-primary/20 focus:border-primary outline-none transition-colors resize-none"
+              aria-label="Your message content"
+              className="w-full px-4 py-3 bg-[var(--bg-dark)] text-white placeholder:text-text-secondary rounded-lg border border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bg-card outline-none transition-colors resize-none"
             />
 
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full py-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 disabled:opacity-50"
+              className="w-full py-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              aria-label={status === "sending" ? "Sending message" : "Send message"}
             >
-              {status === "sending" ? "Sending…" : "Send Message"}
+              {status === "sending" ? (
+                <>
+                  <LoadingSpinner size="sm" />
+                  <span>Sending...</span>
+                </>
+              ) : (
+                "Send Message"
+              )}
             </button>
           </form>
         </motion.div>
