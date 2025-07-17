@@ -4,6 +4,29 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CodeWindow from "./CodeWindow";
 
+const achievements = [
+  {
+    icon: "🏆", 
+    title: "CCNA in Progress",
+    description: "Cisco Certified Network Associate certification"
+  },
+  {
+    icon: "📊", 
+    title: "500+ Downloads", 
+    description: "Combined downloads across hobby projects"
+  },
+  {
+    icon: "🎓", 
+    title: "Electronics-ICT",
+    description: "Specializing in Network Infrastructure"
+  },
+  {
+    icon: "⚡", 
+    title: "Automation Enthusiast",
+    description: "Building tools that solve real problems"
+  }
+];
+
 const technicalSkills = [
   "Python",
   "C# / .NET",
@@ -91,6 +114,25 @@ export default function About() {
               a hobby. I love building practical applications that solve real
               problems, from automation tools to web applications.
             </p>
+
+            {/* Achievement Badges */}
+            <div className="grid grid-cols-2 gap-3 mb-6">
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={achievement.title}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="bg-bg-card p-3 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xl">{achievement.icon}</span>
+                    <h4 className="font-medium text-primary text-sm">{achievement.title}</h4>
+                  </div>
+                  <p className="text-xs text-text-secondary">{achievement.description}</p>
+                </motion.div>
+              ))}
+            </div>
 
             <h3 className="text-xl font-semibold mb-4 text-text-primary" id="studies-heading">
               Current Studies

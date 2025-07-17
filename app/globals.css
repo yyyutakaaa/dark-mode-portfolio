@@ -49,6 +49,15 @@ body {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
   }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.3) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05) !important;
+  }
 }
 
 /* Custom scrollbar */
@@ -95,8 +104,18 @@ html {
 
 /* Focus styles for better accessibility */
 *:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
+  outline: 3px solid var(--primary) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Extra visible focus for buttons and links */
+button:focus,
+a:focus {
+  outline: 3px solid var(--secondary) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.4) !important;
+  transform: scale(1.05) !important;
 }
 
 /* Reduced motion for accessibility */

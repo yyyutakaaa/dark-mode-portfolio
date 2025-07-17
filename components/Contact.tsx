@@ -27,6 +27,9 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
 
+    // Demo loading state voor 2 seconden
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -102,14 +105,34 @@ export default function Contact() {
           <h3 className="text-2xl font-semibold mb-4">Send Me a Message</h3>
 
           {status === "sent" && (
-            <p className="text-green-400 mb-4">
-              Thanks! Your message has been sent.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-secondary/20 border border-secondary/40 rounded-lg p-4 mb-4 text-center"
+            >
+              <div className="text-2xl mb-2">🎉</div>
+              <p className="text-secondary font-medium mb-1">
+                Thanks! Your message has been sent successfully.
+              </p>
+              <p className="text-sm text-text-secondary">
+                I'll get back to you within 24 hours!
+              </p>
+            </motion.div>
           )}
           {status === "error" && (
-            <p className="text-red-400 mb-4">
-              Oops! Something went wrong. Try again later.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-red-500/20 border border-red-500/40 rounded-lg p-4 mb-4 text-center"
+            >
+              <div className="text-2xl mb-2">❌</div>
+              <p className="text-red-400 font-medium mb-1">
+                Oops! Something went wrong.
+              </p>
+              <p className="text-sm text-text-secondary">
+                Please try again later or contact me directly at support@mehdioul.dev
+              </p>
+            </motion.div>
           )}
 
           <form className="space-y-4 max-w-md mx-auto" onSubmit={handleSubmit} noValidate>
