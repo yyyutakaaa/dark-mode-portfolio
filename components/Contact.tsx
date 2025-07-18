@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Github, Mail, Instagram } from "lucide-react";
 import LoadingSpinner from "./LoadingSpinner";
+import Confetti from "./Confetti";
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -16,6 +17,7 @@ export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
+  const [showConfetti, setShowConfetti] = useState(false);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -39,6 +41,10 @@ export default function Contact() {
       if (!res.ok) throw new Error("Network response was not ok");
       setStatus("sent");
       setFormData({ name: "", email: "", message: "" });
+      setShowConfetti(true);
+      
+      // Hide confetti after 3 seconds
+      setTimeout(() => setShowConfetti(false), 3000);
     } catch {
       setStatus("error");
     }
@@ -46,6 +52,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-20 px-4" ref={ref} role="main" aria-labelledby="contact-heading">
+      <Confetti trigger={showConfetti} />
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           id="contact-heading"
@@ -110,7 +117,7 @@ export default function Contact() {
               animate={{ opacity: 1, scale: 1 }}
               className="bg-secondary/20 border border-secondary/40 rounded-lg p-4 mb-4 text-center"
             >
-              <div className="text-2xl mb-2">🎉</div>
+              <div className="text-xl mb-2">Success!</div>
               <p className="text-secondary font-medium mb-1">
                 Thanks! Your message has been sent successfully.
               </p>
@@ -125,7 +132,7 @@ export default function Contact() {
               animate={{ opacity: 1, scale: 1 }}
               className="bg-red-500/20 border border-red-500/40 rounded-lg p-4 mb-4 text-center"
             >
-              <div className="text-2xl mb-2">❌</div>
+              <div className="text-xl mb-2">Error</div>
               <p className="text-red-400 font-medium mb-1">
                 Oops! Something went wrong.
               </p>

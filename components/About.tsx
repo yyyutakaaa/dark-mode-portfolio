@@ -6,22 +6,18 @@ import CodeWindow from "./CodeWindow";
 
 const achievements = [
   {
-    icon: "🏆", 
     title: "CCNA in Progress",
     description: "Cisco Certified Network Associate certification"
   },
   {
-    icon: "📊", 
     title: "500+ Downloads", 
     description: "Combined downloads across hobby projects"
   },
   {
-    icon: "🎓", 
     title: "Electronics-ICT",
     description: "Specializing in Network Infrastructure"
   },
   {
-    icon: "⚡", 
     title: "Automation Enthusiast",
     description: "Building tools that solve real problems"
   }
@@ -126,7 +122,7 @@ export default function About() {
                   className="bg-bg-card p-3 rounded-lg border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xl">{achievement.icon}</span>
+                    <div className="w-2 h-2 bg-primary rounded-full" />
                     <h4 className="font-medium text-primary text-sm">{achievement.title}</h4>
                   </div>
                   <p className="text-xs text-text-secondary">{achievement.description}</p>

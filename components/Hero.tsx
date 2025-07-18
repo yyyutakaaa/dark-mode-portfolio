@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import FunFactsRotator from "./FunFactsRotator";
 
 export default function Hero() {
   const [text, setText] = useState("");
@@ -37,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold mb-6 text-gradient animate-gradient"
         >
-          <span className="sr-only">Hello, I'm </span>Hi, I'm Mehdi 👋
+          <span className="sr-only">Hello, I'm </span>Hi, I'm Mehdi
         </motion.h1>
 
         <motion.p
@@ -80,6 +81,15 @@ export default function Hero() {
           >
             Get in touch
           </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          className="mt-8"
+        >
+          <FunFactsRotator />
         </motion.div>
 
         <motion.div
